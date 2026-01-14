@@ -1320,23 +1320,13 @@ fun BottomSheetPlayer(
                                     .height(68.dp)
                                     .weight(playPauseWeight)
                             ) {
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.Center
-                                ) {
-                                    Icon(
-                                        painter = painterResource(
-                                            if (effectiveIsPlaying) R.drawable.pause else R.drawable.play
-                                        ),
-                                        contentDescription = if (effectiveIsPlaying) "Pause" else stringResource(R.string.play),
-                                        modifier = Modifier.size(32.dp)
-                                    )
-                                    Spacer(modifier = Modifier.width(8.dp))
-                                    Text(
-                                        text = if (effectiveIsPlaying) "Pause" else stringResource(R.string.play),
-                                        style = MaterialTheme.typography.titleMedium
-                                    )
-                                }
+                                Icon(
+                                    painter = painterResource(
+                                        if (effectiveIsPlaying) R.drawable.pause else R.drawable.play
+                                    ),
+                                    contentDescription = if (effectiveIsPlaying) "Pause" else stringResource(R.string.play),
+                                    modifier = Modifier.size(40.dp)
+                                )
                             }
 
                             Spacer(modifier = Modifier.width(8.dp))
